@@ -1,0 +1,171 @@
+
+@font-face {
+    font-family: 'HelveticaNeueLight';
+    src: url('fonts/HelveticaNeueLight.otf') format('opentype');
+}
+
+@font-face {
+font-family: 'HelveticaNeueMedium';
+src: url('fonts/HelveticaNeueMedium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'HelveticaNeueBold';
+    src: url('fonts/HelveticaNeueBold.otf') format('opentype');
+}
+
+body{
+    background-color: #f2f2f2;
+}
+
+#background {
+    color: white;
+}
+
+#Neon{
+    width: 70%;
+    margin: 0 auto; 
+    border-radius: 32px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+    position: relative;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    transform: translate(50%, 50%) rotate(45deg);
+}
+
+
+#Neon.animate {
+    animation: moveNeon 0.5s ease forwards;
+  }
+  
+  @keyframes moveNeon {
+    from {
+        transform: translate(100%, 100%) rotate(45deg);
+    }
+    to {
+        transform: translate(0%, 0%) rotate(0);
+    }
+  }
+
+
+#Neon:hover {
+    transform: translate(35%, 35%) rotate(30deg);
+}
+
+
+#Neon-left{
+    background-color: rgba(255,255,255,0.7);
+    color: black;
+    width: 65%;
+    float: left;
+    height: 1000px;
+    position: absolute; /* 添加相對定位 */
+    overflow: hidden;
+}
+
+#Neon-left::after {
+    content: ""; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(100px);
+    z-index: -1; 
+}
+
+#Neon-right{
+    background-color: inherit;
+    color:black;
+    margin-left: 65%;
+    height: 1000px;
+    border-radius: inherit;
+    z-index: -1;
+}
+
+#first-row{
+    background-color: inherit;
+    width: 100%;
+}
+
+#first-row-left{
+    background-color: inherit;
+    color: black;
+    width: 45%;
+    float: left;
+    height: 200px;
+}
+#first-row-right{
+    background-color: inherit;
+    width: 45%;
+    float: right;
+    height: 200px;
+}
+
+
+.NeueLight{
+    font-family: HelveticaNeueLight;
+    font-size: 16px;
+}
+.NeueMedium{
+    font-family: HelveticaNeueMedium; 
+    font-size: 16px;
+}
+.NeueBold{
+    font-family: HelveticaNeueBold; 
+    font-size: 16px;
+}
+
+.slogan {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: medium;
+  font-size: 38px;
+}
+
+.ellipse {
+    opacity: 1;
+    filter: drop-shadow(5px 5px 5px #666666);
+    position: absolute;
+    top: 500px;
+    left: 100px;
+    z-index: -1;
+}
+
+.center_blue {
+    opacity: 1;
+    filter: drop-shadow(5px 5px 5px #666666);
+    position: absolute;
+    top: 100px;
+    right: 200px;
+    z-index: -1;
+}
+
+
+.animate {
+    transform: translate(-50%, -50%) rotate(360deg);
+}
+
+
+.container {
+    padding-left: 0px;
+    flex-wrap: wrap;
+  }
+  .item {
+    width: fit-content;
+    height: 32px;
+    background-color: #f2f2f2;
+    border-radius: 1000px;
+    font-family: HelveticaNeueMedium;
+    font-size: 13px;
+    display: flex;
+    align-items: center; /* Align vertical */
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+.d-flex{
+    display: flex;
+}
