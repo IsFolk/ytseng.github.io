@@ -2,6 +2,8 @@ var aboutmeButtons = document.getElementsByClassName('aboutme_button');
 var showprojectButtons = document.getElementsByClassName('project_button');
 var experienceButtons = document.getElementsByClassName('experience_button');
 
+
+var helloDiv = document.getElementById('hello');
 var projectDiv = document.getElementById('project');
 var experienceDiv = document.getElementById('experience');
 var animated = false;
@@ -15,6 +17,7 @@ document.getElementById('experience').addEventListener('click', function experie
         console.log("experience animate");
         animated = true;    
     }
+    helloDiv.style.display = 'none';
 });
 
 document.getElementById('project').addEventListener('click', function projecthandleClick() {
@@ -25,6 +28,7 @@ document.getElementById('project').addEventListener('click', function projecthan
         console.log("project animate");
         animated = true    
     }
+    helloDiv.style.display = 'none';
 });
 
 
