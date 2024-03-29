@@ -268,3 +268,35 @@ body{
     display:inline;
     vertical-align:middle;
 }
+
+.project-time{
+    border: 0.4px solid white; /* Adjust border color and width as needed */
+    border-radius: 8px; /* Adjust as needed */
+    width: 30%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-text{
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+}
+
+.project-container {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    scrollbar-width: none; /*For Firefox*/
+}
+
+.project-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari and Opera */
+}
+.scroll {
+    flex: 0 0 auto;
+    width: 40%; /* Adjust as needed */
+    margin-right: 20px; /* Adjust as needed */
+}

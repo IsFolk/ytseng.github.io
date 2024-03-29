@@ -55,3 +55,32 @@ for (let button of experienceButtons) {
         console.log("Show experience")
     });
 }
+
+let scrollDiv = document.getElementsByClassName('scroll');
+let containerDiv = document.querySelector('.project-container');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+for(let div of scrollDiv){
+    console.log(div);
+    div.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - div.offsetLeft;
+        scrollLeft = containerDiv.scrollLeft;
+    });
+    
+    
+    div.addEventListener('mouseup', () => {
+        isDown = false;
+    });
+}
+
+document.addEventListener('mousemove', (e) => {
+    if(!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - scrollDiv[0].offsetLeft;
+    const walk = (x - startX) * 2; //scroll-fast
+    containerDiv.scrollLeft = scrollLeft - walk;
+});
