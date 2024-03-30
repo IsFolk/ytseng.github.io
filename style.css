@@ -276,15 +276,6 @@ body{
     position: relative; /* Needed for the ::after pseudo-element to position correctly */
 }
 
-.project-time-whole::after {
-    content: ""; /* This is necessary for the pseudo-element to show */
-    position: absolute;
-    top: 50%; /* Position the line in the middle of the div */
-    left: 30%; /* Start the line at the right edge of the .project-time div */
-    height: 1px; /* The thickness of the line */
-    width: 70%; /* The width of the line */
-    background: white; /* The color of the line */
-}
 
 .project-time{
     border: 0.4px solid white; /* Adjust border color and width as needed */
@@ -308,39 +299,71 @@ body{
 .project-container {
     display: flex;
     overflow-x: auto;
+    overflow: hidden; /* Add this line */
     background-color: rgba(51,51,51, 0.7);
     width: 100%;
+    height: 60%;
     scrollbar-width: none; /*For Firefox*/
     position: relative;
     z-index: 100;
 }
 
+
 .project-container::-webkit-scrollbar {
     display: none; /* For Chrome, Safari and Opera */
 }
+
+.project-blur {
+    position: relative;
+    height: 90%;
+}
+
+.project-blur::after {
+    content: ""; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(100px);
+    z-index: -1; 
+    background-color: rgba(255, 255, 255, 0); /* Add this line, replace #ffffff with the color you want */
+    border: none;
+    /* Other styles here */
+}
+
+#project-container::after{
+    content: ""; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(100px);
+    z-index: -1; 
+}
+
 .scroll {
     flex: 0 0 auto;
     width: 40%; /* Adjust as needed */
-    margin-right: 0px; /* Adjust as needed */
-    /* border: 0.4px solid white;  */
-}
-
-
-.center_project {
-    opacity: 1;
-    filter: drop-shadow(5px 5px 5px #666666);
-    position: absolute;
-    top: 100px;
-    right: 200px;
-    z-index: -1;
+    height: 100%; /* Add this line */
+    margin: 0; /* Set to 0 */
+    padding: 0; /* Set to 0 */
+    border: none; /* Set to none */
 }
 
 
 .project-ellipse {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    z-index: 1;
+    position: fixed;
+    top: 550px; /* Adjust as needed */
+    left: 500px; /* Adjust as needed */
+    transform: translate(-50%, -45%);
+    z-index: -5;
     /* Other styles here */
+}
+
+.project-description{
+    margin-right: 20%;
 }
