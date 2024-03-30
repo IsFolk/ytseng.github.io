@@ -56,21 +56,21 @@ for (let button of experienceButtons) {
     });
 }
 
-let scrollDiv = document.getElementsByClassName('scroll');
+let scrollDivs = document.getElementsByClassName('scroll');
 let containerDiv = document.querySelector('.project-container');
 
 let isDown = false;
 let startX;
 let scrollLeft;
+let activeDiv;
 
-for(let div of scrollDiv){
-    console.log(div);
+for(let div of scrollDivs){
     div.addEventListener('mousedown', (e) => {
         isDown = true;
         startX = e.pageX - div.offsetLeft;
         scrollLeft = containerDiv.scrollLeft;
+        activeDiv = div; // Keep track of the active div
     });
-    
     
     div.addEventListener('mouseup', () => {
         isDown = false;
@@ -80,7 +80,7 @@ for(let div of scrollDiv){
 document.addEventListener('mousemove', (e) => {
     if(!isDown) return;
     e.preventDefault();
-    const x = e.pageX - scrollDiv[0].offsetLeft;
-    const walk = (x - startX) * 2; //scroll-fast
+    const x = e.pageX - activeDiv.offsetLeft; // Use the active div here
+    const walk = (x - startX) * 1; //scroll-fast
     containerDiv.scrollLeft = scrollLeft - walk;
 });
