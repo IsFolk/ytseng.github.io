@@ -1,4 +1,4 @@
-Try to do some cool interactive resume for my self :) (Project part is still under construction)
+Try to create an interactive resume for my self :) (Project part is still under construction)
 
 Now I am trying to code it in different frontend framework suck as ReactJS.
 
