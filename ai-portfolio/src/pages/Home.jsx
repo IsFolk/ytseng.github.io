@@ -1,4 +1,5 @@
 import "../App.css";
+import Header from "../components/Header";
 import Hero from "../components/Hero";
 import SelectedWork from "../components/SelectedWork";
 import Principles from "../components/Principles";
@@ -12,7 +13,6 @@ export default function App() {
       <About />
       <SelectedWork />
       <Principles />
-      <Contact />
     </main>
   );
 }
