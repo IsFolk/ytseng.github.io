@@ -1,13 +1,15 @@
+import { Link } from "react-router-dom";
+
 export default function Header() {
   return (
     <header className="siteHeader">
-      <a href="/" className="siteLogo">
+      <Link to="/" className="siteLogo">
         Yu-Ting Tseng
-      </a>
+      </Link>
 
       <nav className="siteNav">
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
+        <Link to="/#work">Work</Link>
+        <Link to="/#contact">Contact</Link>
       </nav>
     </header>
   );
