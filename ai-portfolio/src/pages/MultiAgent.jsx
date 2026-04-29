@@ -64,6 +64,7 @@ export default function MultiAgent() {
         <h2>Interface Design</h2>
 
         <div className="caseVisual">
+            <h3>Multi-agent ideation</h3>
             <img src={`${BASE}images/multi-agent/ui-agents.jpg`} />
             <p className="caption">
             Multiple agents generate ideas from different perspectives, increasing diversity.
@@ -71,6 +72,7 @@ export default function MultiAgent() {
         </div>
 
         <div className="caseVisual">
+            <h3>Multi-agent tools</h3>
             <img src={`${BASE}images/multi-agent/ui-tools.jpg`} />
             <p className="caption">
             Users can steer the process through structured prompting and selection.
@@ -78,6 +80,7 @@ export default function MultiAgent() {
         </div>
 
         <div className="caseVisual">
+            <h3>Multi-agent conversation</h3>
             <img src={`${BASE}images/multi-agent/ui-convo.png`} />
             <p className="caption">
             The system produces refined outputs through iterative feedback loops.
@@ -91,33 +94,16 @@ export default function MultiAgent() {
 
       <section className="caseSection">
         <h2>Interaction Flow</h2>
+
         <div className="caseVisual">
-        <img
-            src={`${BASE}images/multi-agent/flow.png`}
-            alt="User-steerable multi-agent ideation flow"
-        />
-      </div>
-        <div className="flowGrid">
-          <div>
-            <span>01</span>
-            <h3>User Input</h3>
-            <p>Users start with an initial idea, goal, or problem statement.</p>
-          </div>
-          <div>
-            <span>02</span>
-            <h3>Multi-Agent Ideation</h3>
-            <p>Business and engineering agents generate ideas from different perspectives.</p>
-          </div>
-          <div>
-            <span>03</span>
-            <h3>User Control Layer</h3>
-            <p>Users select ideas, add input, or use structured prompting assistance.</p>
-          </div>
-          <div>
-            <span>04</span>
-            <h3>Iterative Refinement</h3>
-            <p>The next round becomes more directed based on user choices and feedback.</p>
-          </div>
+        <img src={`${BASE}images/multi-agent/flow.png`} />
+        </div>
+
+        <div className="flowSteps">
+            <span>01 Input</span>
+            <span>02 Ideation</span>
+            <span>03 Steering</span>
+            <span>04 Iteration</span>
         </div>
       </section>
 
