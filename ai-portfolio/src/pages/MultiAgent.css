@@ -1,0 +1,220 @@
+.casePage {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+.backLink {
+  display: inline-flex;
+  margin-bottom: 64px;
+  color: #6f6a60;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.caseHero {
+  text-align: center;
+  padding-bottom: 72px;
+  border-bottom: 1px solid #d8d3c7;
+}
+
+.caseTag {
+  margin: 0 0 18px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6f6a60;
+}
+
+.caseHero h1 {
+  max-width: 860px;
+  margin: 0 auto 28px;
+  font-size: clamp(44px, 7vw, 88px);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  font-weight: 500;
+}
+
+.caseHero p {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 21px;
+  line-height: 1.55;
+  color: #3d3933;
+}
+
+.caseMetaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 32px 0 72px;
+}
+
+.caseMetaGrid div {
+  border: 1px solid #d8d3c7;
+  border-radius: 20px;
+  padding: 20px;
+  background: #fffdf8;
+}
+
+.caseMetaGrid span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #6f6a60;
+}
+
+.caseMetaGrid p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.caseSection {
+  padding: 64px 0;
+  border-top: 1px solid #d8d3c7;
+  text-align: center;
+}
+
+.caseSection h2 {
+  margin: 0 0 24px;
+  font-size: clamp(30px, 4vw, 48px);
+  letter-spacing: -0.04em;
+  font-weight: 500;
+}
+
+.caseSection p {
+  max-width: 720px;
+  margin: 0 auto;       /* 👈 這個才是關鍵 */
+  font-size: 19px;
+  line-height: 1.7;
+  color: #3d3933;
+}
+
+.caseList {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+
+  display: grid;
+  gap: 12px;
+}
+
+.caseList li {
+  margin: 0;
+  padding: 18px 20px;
+
+  border: 1px solid #d8d3c7;
+  border-radius: 18px;
+  background: #fffdf8;
+
+  font-size: 17px;
+  line-height: 1.55;
+  color: #3d3933;
+
+  text-align: center;        /* 👈 文字置中 */
+}
+
+
+.flowGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.flowGrid div {
+  background: #fffdf8;
+  border: 1px solid #d8d3c7;
+  border-radius: 22px;
+  padding: 24px;
+}
+
+.flowGrid span {
+  display: block;
+  margin-bottom: 28px;
+  font-size: 13px;
+  color: #6f6a60;
+}
+
+.flowGrid h3 {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+.flowGrid p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.caseVisual {
+  max-width: 820px;
+  margin: 48px auto;
+}
+
+.caseVisual img {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid #d8d3c7;
+}
+
+.caption {
+  margin-top: 12px;
+  font-size: 15px;
+  color: #6f6a60;
+  text-align: center;
+}
+
+.uiLayout {
+  max-width: 920px;
+  margin: 32px auto;
+}
+
+.uiMain {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid #d8d3c7;
+  margin-bottom: 16px;
+}
+
+.uiRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.uiRow img {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid #d8d3c7;
+}
+
+
+
+@media (max-width: 720px) {
+  .casePage {
+    padding: 32px 18px 72px;
+  }
+
+  .backLink {
+    margin-bottom: 48px;
+  }
+
+  .caseHero {
+    padding-bottom: 56px;
+  }
+
+  .caseMetaGrid,
+  .flowGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .caseSection {
+    padding: 48px 0;
+  }
+
+  .caseHero p,
+  .caseSection p {
+    font-size: 17px;
+  }
+}

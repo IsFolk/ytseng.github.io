@@ -1,18 +1,12 @@
-import "./App.css";
-import Hero from "./components/Hero";
-import SelectedWork from "./components/SelectedWork";
-import Principles from "./components/Principles";
-import About from "./components/About";
-import Contact from "./components/Contact";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import MultiAgent from "./pages/MultiAgent";
 
 export default function App() {
   return (
-    <main className="page">
-      <Hero />
-      <SelectedWork />
-      <Principles />
-      <About />
-      <Contact />
-    </main>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/projects/multi-agent-ai" element={<MultiAgent />} />
+    </Routes>
   );
 }

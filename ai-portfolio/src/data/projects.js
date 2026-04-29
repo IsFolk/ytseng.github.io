@@ -1,24 +1,29 @@
 export const projects = [
   {
+    id: "multi-agent-ideation",
+    slug: "multi-agent-ai",
     title: "Designing a User-Steerable Multi-Agent AI System",
     tag: "Agentic UX / Human-AI Interaction",
+    role: "AI Interaction Designer / Prototype Builder",
     description:
-      "Designed agent roles, prompt structures, and interaction flows for a multi-agent ideation system. Built a working LLM prototype focused on user steering, iteration, and agent feedback.",
+      "Designed agent roles, prompt structures, and interaction flows for a multi-agent ideation system focused on user steering, iteration, and agent feedback.",
     highlights: [
-      "Multi-agent interaction design",
-      "Prompting as a control layer",
-      "User-steered refinement loop",
+      "Designed multi-agent roles and collaboration flow",
+      "Used prompting as a user control layer",
+      "Built a user-steered refinement loop",
     ],
   },
   {
+    id: "thermal-optimization-ux",
     title: "Aligning AI System Behavior with User Expectations",
     tag: "AI System UX / Evaluation",
+    role: "UX Researcher / AI System Evaluator",
     description:
-      "Evaluated how AI-driven thermal optimization behavior was interpreted by users, translating UX insights into system-level recommendations for behavior tuning and expectation alignment.",
+      "Evaluated how users interpreted AI-driven laptop thermal optimization behavior and translated findings into system-level UX recommendations.",
     highlights: [
-      "AI behavior vs. user perception",
-      "Scenario-based evaluation",
-      "System-level UX recommendations",
+      "Compared AI behavior with user expectations",
+      "Designed scenario-based evaluation tasks",
+      "Proposed system behavior and feedback improvements",
     ],
   },
 ];

@@ -4,8 +4,7 @@ export default function Hero() {
       <p className="eyebrow">Yu-Ting Tseng</p>
       <h1>AI Interaction Designer</h1>
       <p className="heroText">
-        I design AI-native systems, focusing on agent behavior, interaction
-        flows, and user control.
+        Helping people understand and control AI systems
       </p>
       <div className="heroLinks">
         <a href="#work">Selected Work</a>
