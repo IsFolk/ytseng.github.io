@@ -16,7 +16,7 @@ export default function AIBehavior() {
         <p className={styles.caseTag}>AI System UX / Behavior Evaluation</p>
 
         <h1 className={styles.caseTitle}>
-          Designing AI Behavior That Feels Understandable
+          Aligning AI System Behavior with User Expectations
         </h1>
 
         <p className={styles.caseDescription}>
