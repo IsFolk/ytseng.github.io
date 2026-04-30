@@ -2,6 +2,10 @@
    CASE LAYOUT
 ========================= */
 
+body:has(.casePage) {
+  background: #d8d1c3;
+}
+
 .casePage {
   max-width: 960px;
   padding: 56px 56px 104px;
@@ -24,10 +28,6 @@
   text-transform: uppercase;
   color: #7c6a55;
   text-align: center;
-}
-
-.caseBack {
-  margin-bottom: 32px;
 }
 
 /* =========================
@@ -71,16 +71,24 @@
 
 .caseMetaGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 14px;
   padding: 28px 0 72px;
 }
 
 .caseMetaItem {
+  min-width: 0;
   border: 1px solid #d6cbb7;
   border-radius: 18px;
   padding: 18px;
   background: rgba(255, 250, 242, 0.9);
+}
+
+.caseMetaItem p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.45;
+  overflow-wrap: break-word;
 }
 
 .caseMetaItem span {
@@ -92,11 +100,6 @@
   color: #7c6a55;
 }
 
-.caseMetaItem p {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.45;
-}
 
 /* =========================
    SECTION
@@ -183,14 +186,14 @@
   max-width: 760px;
 }
 
-.caseCompareCol {
+.caseCompare .col {
   padding: 22px;
   border-radius: 18px;
   background: rgba(255, 250, 242, 0.9);
   border: 1px solid #d6cbb7;
 }
 
-.caseCompareCol h3 {
+.caseCompare h3 {
   margin: 0 0 14px;
   font-size: 13px;
   letter-spacing: 0.06em;
@@ -198,49 +201,158 @@
   color: #7c6a55;
 }
 
-/* =========================
-   TAKEAWAY
-========================= */
-
-.caseTakeaway {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 44px;
-  border-radius: 20px;
-  background: rgba(255, 250, 242, 0.9);
-  border: 1px solid #d6cbb7;
-  text-align: center;
+.caseCompare p {
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 1.55;
 }
-
-.caseTakeaway h3 {
-  margin: 0 0 16px;
-  font-size: 14px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #7c6a55;
-}
-
-.caseTakeaway p {
-  margin: 0;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #2c2621;
-}
-
-/* =========================
-   HIGHLIGHT
-========================= */
 
 .caseHighlight {
-  max-width: 720px;
-  margin: 32px auto 0;
-  padding: 24px 28px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, rgba(184, 170, 146, 0.2) 0%, rgba(140, 122, 101, 0.15) 100%);
-  border: 1px solid #d6cbb7;
-  font-size: 17px;
-  line-height: 1.7;
-  color: #2c2621;
-  text-align: center;
-  font-style: italic;
+  max-width: 680px;
+  margin: 24px auto 0;
+  font-size: 19px;
+  line-height: 1.6;
+  color: #121212;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 720px) {
+  body:has(.casePage) {
+    background: #f5f1e7;
+  }
+
+  .casePage {
+    width: 100%;
+    max-width: none;
+    padding: 36px 20px 72px;
+    border: none;
+    box-shadow: none;
+  }
+
+  .casePage::before {
+    margin-bottom: 36px;
+    padding-bottom: 12px;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+  }
+
+  .caseBack {
+    margin-bottom: 40px;
+  }
+
+  .caseHero {
+    padding-bottom: 48px;
+  }
+
+  .caseTag {
+    margin-bottom: 14px;
+    font-size: 11px;
+  }
+
+  .caseTitle {
+    max-width: 100%;
+    margin-bottom: 22px;
+    font-size: clamp(36px, 12vw, 52px);
+    line-height: 1;
+    letter-spacing: -0.045em;
+  }
+
+  .caseDescription {
+    max-width: 100%;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .caseMetaGrid {
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+    padding: 24px 0 52px;
+  }
+
+  .caseMetaItem {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .caseMetaItem span {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+
+  .caseMetaItem p {
+    font-size: 14px;
+  }
+
+  .caseSection {
+    padding: 46px 0;
+  }
+
+  .caseSection h2 {
+    margin-bottom: 18px;
+    font-size: clamp(26px, 9vw, 34px);
+    line-height: 1.12;
+  }
+
+  .caseSection p {
+    max-width: 100%;
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  .caseList {
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .caseItem {
+    padding: 16px;
+    border-radius: 14px;
+    font-size: 15.5px;
+    line-height: 1.6;
+  }
+
+  .caseVisual {
+    max-width: 100%;
+    margin: 36px auto;
+  }
+
+  .caseVisual img {
+    border-radius: 12px;
+  }
+
+  .caption {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .caseCompare {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 100%;
+    margin: 28px auto;
+  }
+
+  .caseCompare .col {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .caseCompare h3 {
+    font-size: 12px;
+  }
+
+  .caseCompare p {
+    font-size: 15.5px;
+  }
+
+  .caseHighlight {
+    max-width: 100%;
+    margin-top: 22px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
 }
