@@ -1,6 +1,7 @@
 import styles from "../styles/Case.module.css";
 import "./MultiAgent.css";
 import BackLink from "../components/BackLink";
+import ZoomableImage from "../components/ZoomableImage";
 
 export default function MultiAgent() {
     const BASE = import.meta.env.BASE_URL;
@@ -84,7 +85,10 @@ export default function MultiAgent() {
 
                 <div className={styles.caseVisual}>
                     <h3>Multi-agent ideation</h3>
-                    <img src={`${BASE}images/multi-agent/ui-agents.jpg`} />
+                    <ZoomableImage
+                        src={`${BASE}images/multi-agent/ui-agents.jpg`}
+                        alt="Multi-agent ideation interface"
+                    />
                     <p className={styles.caption}>
                         Multiple agents generate ideas from different perspectives,
                         increasing diversity.
@@ -93,7 +97,10 @@ export default function MultiAgent() {
 
                 <div className={styles.caseVisual}>
                     <h3>Multi-agent tools</h3>
-                    <img src={`${BASE}images/multi-agent/ui-tools.jpg`} />
+                    <ZoomableImage
+                        src={`${BASE}images/multi-agent/ui-tools.jpg`}
+                        alt="Multi-agent tools interface"
+                    />
                     <p className={styles.caption}>
                         Users can steer the process through structured prompting and
                         selection.
@@ -102,7 +109,10 @@ export default function MultiAgent() {
 
                 <div className={styles.caseVisual}>
                     <h3>Multi-agent conversation</h3>
-                    <img src={`${BASE}images/multi-agent/ui-convo.png`} />
+                    <ZoomableImage
+                        src={`${BASE}images/multi-agent/ui-convo.png`}
+                        alt="Multi-agent conversation interface"
+                    />
                     <p className={styles.caption}>
                         The system produces refined outputs through iterative feedback loops.
                     </p>
@@ -113,7 +123,10 @@ export default function MultiAgent() {
                 <h2>Interaction Flow</h2>
 
                 <div className={styles.caseVisual}>
-                    <img src={`${BASE}images/multi-agent/flow.png`} />
+                    <ZoomableImage
+                        src={`${BASE}images/multi-agent/flow.png`}
+                        alt="Interaction flow diagram"
+                    />
                 </div>
 
                 <div className="flowSteps">

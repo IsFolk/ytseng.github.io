@@ -1,6 +1,7 @@
 import styles from "../styles/Case.module.css";
 import "./ThermalOptimization.css";
 import BackLink from "../components/BackLink";
+import ZoomableImage from "../components/ZoomableImage";
 
 export default function ThermalOptimization() {
   const BASE = import.meta.env.BASE_URL;
@@ -55,7 +56,7 @@ export default function ThermalOptimization() {
         <h2>Scenario</h2>
 
         <div className={styles.caseVisual}>
-          <img
+          <ZoomableImage
             src={`${BASE}images/thermal/scenario-sleep.png`}
             alt="User sleeping while laptop fan suddenly turns on"
           />
@@ -66,7 +67,7 @@ export default function ThermalOptimization() {
         </div>
 
         <div className={styles.caseVisual}>
-          <img
+          <ZoomableImage
             src={`${BASE}images/thermal/scenario-export.png`}
             alt="User exporting video while system optimizes performance"
           />
@@ -135,7 +136,7 @@ export default function ThermalOptimization() {
         <h2>How the mismatch happens</h2>
 
         <div className={styles.caseVisual}>
-          <img
+          <ZoomableImage
             src={`${BASE}images/thermal/system-flow.png`}
             alt="System behavior vs user expectation diagram"
           />
