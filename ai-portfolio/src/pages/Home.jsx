@@ -7,12 +7,12 @@ import About from "../components/About";
 import Contact from "../components/Contact";
 
 export default function App() {
-  return (
-    <main className="page">
-      <Hero />
-      <About />
-      <SelectedWork />
-      <Principles />
-    </main>
-  );
+    return (
+        <main className="page">
+            <Hero />
+            <About />
+            <SelectedWork />
+            <Principles />
+        </main>
+    );
 }

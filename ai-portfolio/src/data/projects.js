@@ -14,9 +14,9 @@ export const projects = [
     ],
   },
   {
-    id: "thermal-optimization-ux",
-    title: "Aligning AI System Behavior with User Expectations",
+    slug: "thermal-optimization",
     tag: "AI System UX / Evaluation",
+    title: "Aligning AI System Behavior with User Expectations",
     role: "UX Researcher / AI System Evaluator",
     description:
       "Evaluated how users interpreted AI-driven laptop thermal optimization behavior and translated findings into system-level UX recommendations.",
@@ -25,5 +25,5 @@ export const projects = [
       "Designed scenario-based evaluation tasks",
       "Proposed system behavior and feedback improvements",
     ],
-  },
+  }
 ];
