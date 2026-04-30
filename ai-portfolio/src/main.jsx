@@ -5,11 +5,13 @@ import './index.css'
 import App from './App.jsx'
 import ScrollToTop from './ScrollToTop.jsx';
 
-createRoot(document.getElementById('root')).render(
+const basename = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter basename="/ytseng.github.io">
+    <BrowserRouter basename={basename}>
       <ScrollToTop />
       <App />
     </BrowserRouter>
-  </StrictMode>,
-)
+  </StrictMode>
+);
