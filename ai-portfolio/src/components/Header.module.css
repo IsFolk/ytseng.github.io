@@ -74,6 +74,10 @@
   .header {
     top: 12px;
     height: 46px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   .logo {
@@ -81,12 +85,21 @@
   }
 
   .nav {
-    left: 50%;
+    position: relative;
+    left: auto;
     right: auto;
-    transform: translateX(-50%);
+    top: 0;
+    transform: none;
+
+    width: fit-content;
+    max-width: calc(100vw - 24px);
+
+    justify-content: center;
+    align-items: center;
 
     gap: 4px;
     padding: 6px;
+    margin: 0 auto;
   }
 
   .link {
