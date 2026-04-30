@@ -8,11 +8,11 @@ import About from "../components/About";
 import Contact from "../components/Contact";
 import Modal from "../components/Modal";
 import MultiAgent from "./MultiAgent";
-import ThermalOptimization from "./ThermalOptimization";
+import AIBehavior from "./AIBehavior";
 
 const projectComponents = {
   "multi-agent-ai": MultiAgent,
-  "thermal-optimization": ThermalOptimization,
+  "ai-behavior": AIBehavior,
 };
 
 export default function Home() {

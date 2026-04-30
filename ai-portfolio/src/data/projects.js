@@ -14,16 +14,17 @@ export const projects = [
     ],
   },
   {
-    slug: "thermal-optimization",
-    tag: "AI System UX / Evaluation",
+    id: "ai-behavior",
+    slug: "ai-behavior",
+    tag: "AI System UX / Behavior Evaluation",
     title: "Aligning AI System Behavior with User Expectations",
     role: "UX Researcher / AI System Evaluator",
     description:
-      "Evaluated how users interpreted AI-driven laptop thermal optimization behavior and translated findings into system-level UX recommendations.",
+      "Evaluated how users interpreted AI-driven system behavior in everyday device scenarios, and translated findings into clearer behavior and feedback design principles.",
     highlights: [
-      "Compared AI behavior with user expectations",
+      "Compared system behavior with user expectations",
       "Designed scenario-based evaluation tasks",
-      "Proposed system behavior and feedback improvements",
+      "Identified gaps between system logic and user perception",
     ],
-  }
+  },
 ];

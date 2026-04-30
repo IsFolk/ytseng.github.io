@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import MultiAgent from "./pages/MultiAgent";
 import Contact from "./components/Contact";
-import ThermalOptimization from "./pages/ThermalOptimization";
+import AIBehavior from "./pages/AIBehavior";
 
 export default function App() {
   return (
@@ -13,7 +13,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects/multi-agent-ai" element={<MultiAgent />} />
-        <Route path="/projects/thermal-optimization" element={<ThermalOptimization />} />
+        <Route path="/projects/ai-behavior" element={<AIBehavior />} />
       </Routes>
 
       <Contact />
