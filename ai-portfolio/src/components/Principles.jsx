@@ -1,10 +1,10 @@
 import styles from "./Principles.module.css";
 
 const principles = [
-  "Design for user steering, not full automation",
-  "Treat prompting as an interaction layer",
-  "Design agent behavior, not just interfaces",
-  "Make AI system behavior understandable and actionable",
+  "Human control over full automation",
+  "Interaction over one-shot prompting",
+  "Agent behavior over static interfaces",
+  "Clarity over black-box intelligence",
 ];
 
 export default function Principles() {
