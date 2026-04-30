@@ -1,24 +1,26 @@
 import { FiMail, FiLinkedin } from "react-icons/fi";
+import styles from "./Contact.module.css";
 
 export default function Contact() {
   return (
-    <footer id="contact" className="footer">
-      <div className="footerInner">
-        <h2>Let’s work together</h2>
+    <footer id="contact" className={styles.footer}>
+      <div className={styles.inner}>
+        <h2 className={styles.title}>Let’s work together</h2>
 
-        <p className="footerText">
+        <p className={styles.text}>
           I’m interested in designing AI systems that are understandable,
           steerable, and human-centered.
         </p>
 
-        <div className="footerLinks">
-          <a href="mailto:sarahtseng0603@gmail.com">
+        <div className={styles.links}>
+          <a className={styles.link} href="mailto:sarahtseng0603@gmail.com">
             <FiMail />
             Email
           </a>
 
           <a
-            href="https://www.linkedin.com/in/你的帳號"
+            className={styles.link}
+            href="https://www.linkedin.com/in/yu-ting-t-3a6370237/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -27,9 +29,9 @@ export default function Contact() {
           </a>
         </div>
 
-        <div className="footerBottom">
+        <div className={styles.bottom}>
           <p>© 2026 Yu-Ting Tseng</p>
-          <p>AI Interaction Designer</p>
+          <p>Human-AI Interaction · UX Research · Prototyping</p>
         </div>
       </div>
     </footer>

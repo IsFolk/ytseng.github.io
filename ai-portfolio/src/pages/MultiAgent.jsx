@@ -1,31 +1,40 @@
-import { Link } from "react-router-dom";
 import "./MultiAgent.css";
+import BackLink from "../components/BackLink";
 
 export default function MultiAgent() {
-    const BASE = import.meta.env.BASE_URL;
+  const BASE = import.meta.env.BASE_URL;
+
   return (
     <main className="casePage">
-      <Link to="/" className="backLink">← Back to home</Link>
+      <div className="caseBack">
+        <BackLink />
+      </div>
 
       <section className="caseHero">
         <p className="caseTag">Agentic UX / Human-AI Interaction</p>
-        <h1>Designing a User-Steerable Multi-Agent AI System</h1>
-        <p>
+
+        <h1 className="caseTitle">
+          Designing a User-Steerable Multi-Agent AI System
+        </h1>
+
+        <p className="caseDescription">
           Designed and prototyped a multi-agent ideation system that helps users
           actively steer, evaluate, and refine AI-generated ideas.
         </p>
       </section>
 
       <section className="caseMetaGrid">
-        <div>
+        <div className="caseMetaItem">
           <span>Role</span>
           <p>AI Interaction Designer / Prototype Builder</p>
         </div>
-        <div>
+
+        <div className="caseMetaItem">
           <span>Focus</span>
           <p>Agent behavior, prompting, user control</p>
         </div>
-        <div>
+
+        <div className="caseMetaItem">
           <span>Methods</span>
           <p>Prompt design, interaction design, prototyping</p>
         </div>
@@ -52,11 +61,20 @@ export default function MultiAgent() {
 
       <section className="caseSection">
         <h2>What I Designed</h2>
+
         <ul className="caseList">
-          <li>Role-based agents that simulate different perspectives</li>
-          <li>A generate → select → refine → iterate interaction loop</li>
-          <li>A user control layer for filtering, choosing, and steering outputs</li>
-          <li>A SCAMPER-based reasoning scaffold to guide exploration</li>
+          <li className="caseItem">
+            Role-based agents that simulate different perspectives
+          </li>
+          <li className="caseItem">
+            A generate → select → refine → iterate interaction loop
+          </li>
+          <li className="caseItem">
+            A user control layer for filtering, choosing, and steering outputs
+          </li>
+          <li className="caseItem">
+            A SCAMPER-based reasoning scaffold to guide exploration
+          </li>
         </ul>
       </section>
 
@@ -64,63 +82,62 @@ export default function MultiAgent() {
         <h2>Interface Design</h2>
 
         <div className="caseVisual">
-            <h3>Multi-agent ideation</h3>
-            <img src={`${BASE}images/multi-agent/ui-agents.jpg`} />
-            <p className="caption">
-            Multiple agents generate ideas from different perspectives, increasing diversity.
-            </p>
+          <h3>Multi-agent ideation</h3>
+          <img src={`${BASE}images/multi-agent/ui-agents.jpg`} />
+          <p className="caption">
+            Multiple agents generate ideas from different perspectives,
+            increasing diversity.
+          </p>
         </div>
 
         <div className="caseVisual">
-            <h3>Multi-agent tools</h3>
-            <img src={`${BASE}images/multi-agent/ui-tools.jpg`} />
-            <p className="caption">
-            Users can steer the process through structured prompting and selection.
-            </p>
+          <h3>Multi-agent tools</h3>
+          <img src={`${BASE}images/multi-agent/ui-tools.jpg`} />
+          <p className="caption">
+            Users can steer the process through structured prompting and
+            selection.
+          </p>
         </div>
 
         <div className="caseVisual">
-            <h3>Multi-agent conversation</h3>
-            <img src={`${BASE}images/multi-agent/ui-convo.png`} />
-            <p className="caption">
+          <h3>Multi-agent conversation</h3>
+          <img src={`${BASE}images/multi-agent/ui-convo.png`} />
+          <p className="caption">
             The system produces refined outputs through iterative feedback loops.
-            </p>
+          </p>
         </div>
-
-        </section>
-
-
-      
+      </section>
 
       <section className="caseSection">
         <h2>Interaction Flow</h2>
 
         <div className="caseVisual">
-        <img src={`${BASE}images/multi-agent/flow.png`} />
+          <img src={`${BASE}images/multi-agent/flow.png`} />
         </div>
 
         <div className="flowSteps">
-            <span>01 Input</span>
-            <span>02 Ideation</span>
-            <span>03 Steering</span>
-            <span>04 Iteration</span>
+          <span>01 Input</span>
+          <span>02 Ideation</span>
+          <span>03 Steering</span>
+          <span>04 Iteration</span>
         </div>
       </section>
 
       <section className="caseSection">
         <h2>Key Design Decisions</h2>
+
         <ul className="caseList">
-          <li>
-            <strong>Perspective diversity:</strong> multiple agents increased idea diversity,
-            but too many perspectives could overwhelm users.
+          <li className="caseItem">
+            <strong>Perspective diversity:</strong> multiple agents increased idea
+            diversity, but too many perspectives could overwhelm users.
           </li>
-          <li>
-            <strong>Structured scaffolding:</strong> SCAMPER reduced cognitive load, but too
-            much structure limited creative flexibility.
+          <li className="caseItem">
+            <strong>Structured scaffolding:</strong> SCAMPER reduced cognitive
+            load, but too much structure limited creative flexibility.
           </li>
-          <li>
-            <strong>User control:</strong> users needed to actively steer AI behavior rather
-            than passively receive outputs.
+          <li className="caseItem">
+            <strong>User control:</strong> users needed to actively steer AI
+            behavior rather than passively receive outputs.
           </li>
         </ul>
       </section>

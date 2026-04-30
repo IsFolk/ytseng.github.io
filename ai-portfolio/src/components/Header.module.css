@@ -1,0 +1,62 @@
+.header {
+  position: sticky;
+  top: 16px;
+  z-index: 10;
+
+  max-width: 1120px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 14px;
+  border: 1px solid rgba(18, 18, 18, 0.12);
+  border-radius: 999px;
+
+  background: rgba(246, 244, 239, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px); /* 🔥 Safari */
+}
+
+.logo {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #121212;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+}
+
+.link {
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #121212;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.link:hover {
+  background: #121212;
+  color: #f6f4ef;
+}
+
+@media (max-width: 720px) {
+  .header {
+    top: 10px;
+    margin: 0 12px;
+  }
+
+  .logo {
+    font-size: 13px;
+  }
+
+  .link {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+}

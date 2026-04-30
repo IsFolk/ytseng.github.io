@@ -1,0 +1,109 @@
+/* Hero.module.css */
+
+.hero {
+  min-height: 72vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #d8d3c7;
+}
+
+.eyebrow {
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: #6f6a60;
+  margin: 0 0 18px;
+}
+
+.title {
+  max-width: 900px;
+  font-size: clamp(56px, 10vw, 110px);
+  line-height: 0.92;
+  letter-spacing: -0.075em;
+  font-weight: 500;
+  margin: 0;
+
+  color: #121212;
+  -webkit-text-fill-color: #121212;
+  text-rendering: auto;
+}
+
+.text {
+  max-width: 620px;
+  margin: 32px auto 0;
+  font-size: 22px;
+  line-height: 1.5;
+  color: #35322d;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid #121212;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+.link:hover {
+  background: #121212;
+  color: #f6f4ef;
+}
+
+@media (max-width: 900px) {
+  .title {
+    font-size: clamp(52px, 12vw, 88px);
+  }
+
+  .text {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: 70vh;
+  }
+
+  .title {
+    font-size: clamp(48px, 16vw, 68px);
+    letter-spacing: -0.035em;
+  }
+
+  .text {
+    max-width: 100%;
+    font-size: 19px;
+  }
+
+  .links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .link {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 46px;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+}
