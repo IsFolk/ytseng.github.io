@@ -23,6 +23,21 @@ export default function MultiAgent() {
                     Designed and prototyped a multi-agent ideation system that helps users
                     actively steer, evaluate, and refine AI-generated ideas.
                 </p>
+
+                <div className={styles.caseStatusGroup}>
+                    <a
+                        href="https://taichi2025.taiwanchi.org/#/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className={styles.caseStatus}
+                    >
+                        Presented at TAICHI 2025
+                    </a>
+
+                    <span className={styles.caseStatus}>
+                        Reached CHI 2026 Revise &amp; Resubmit stage
+                    </span>
+                </div>
             </section>
 
             <section className={styles.caseMetaGrid}>
