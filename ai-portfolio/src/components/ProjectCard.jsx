@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import styles from "./ProjectCard.module.css";
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, onClick }) {
+  const Card = onClick ? "button" : Link;
+  const cardProps = onClick
+    ? { onClick: () => onClick(project.slug) }
+    : { to: `/projects/${project.slug}` };
+
   return (
-    <Link to={`/projects/${project.slug}`} className={styles.card}>
+    <Card className={styles.card} {...cardProps}>
       <p className={styles.tag}>{project.tag}</p>
       <h3 className={styles.title}>{project.title}</h3>
       <p className={styles.role}>{project.role}</p>
@@ -16,6 +21,6 @@ export default function ProjectCard({ project }) {
           </li>
         ))}
       </ul>
-    </Link>
+    </Card>
   );
 }

@@ -1,0 +1,96 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 1000;
+  padding: 40px 20px 20px;
+  animation: fadeIn 0.2s ease;
+  overflow-y: auto;
+}
+
+.modal {
+  background: var(--bg-primary, #fff);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.3s ease;
+  padding: 24px;
+}
+
+/* 自訂 scrollbar 造型 */
+.modal::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #b9aa92 0%, #8c7a65 100%);
+  border-radius: 5px;
+  border: 2px solid #fff;
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #8c7a65 0%, #6b5a4a 100%);
+}
+
+/* Firefox */
+.modal {
+  scrollbar-width: thin;
+  scrollbar-color: #8c7a65 rgba(0, 0, 0, 0.1);
+}
+
+.closeButton {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #c9bea9;
+  font-size: 28px;
+  cursor: pointer;
+  color: #7c6a55;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  z-index: 1001;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.closeButton:hover {
+  background: #fff;
+  color: #4a3f32;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
