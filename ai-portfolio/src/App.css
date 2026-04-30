@@ -514,3 +514,20 @@ a {
     padding: 22px 18px;
   }
 }
+
+h1,
+h2,
+h3 {
+  color: #121212;
+  -webkit-text-fill-color: #121212;
+  text-rendering: auto;
+}
+
+@media (max-width: 720px) {
+  .hero h1,
+  .section h2,
+  .footer h2 {
+    letter-spacing: -0.035em;
+    -webkit-text-fill-color: #121212;
+  }
+}
