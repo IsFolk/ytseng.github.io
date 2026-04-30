@@ -8,9 +8,9 @@ export default function ThermalOptimization() {
 
   return (
     <main className={styles.casePage}>
-      <div className={styles.caseBack}>
+      {/* <div className={styles.caseBack}>
         <BackLink />
-      </div>
+      </div> */}
 
       <section className={styles.caseHero}>
         <p className={styles.caseTag}>AI System UX / Evaluation</p>

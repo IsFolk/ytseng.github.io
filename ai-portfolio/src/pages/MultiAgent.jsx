@@ -8,9 +8,9 @@ export default function MultiAgent() {
 
     return (
         <main className={styles.casePage}>
-            <div className={styles.caseBack}>
+            {/* <div className={styles.caseBack}>
                 <BackLink />
-            </div>
+            </div> */}
 
             <section className={styles.caseHero}>
                 <p className={styles.caseTag}>Agentic UX / Human-AI Interaction</p>
