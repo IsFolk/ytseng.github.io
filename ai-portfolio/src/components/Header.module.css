@@ -34,15 +34,16 @@
 .link {
   padding: 8px 12px;
   border-radius: 999px;
-  color: #121212;
+  color: #6f6a60;
   text-decoration: none;
   font-size: 14px;
   transition: 0.2s ease;
 }
 
+
 .link:hover {
-  background: #121212;
-  color: #f6f4ef;
+  background: rgba(18, 18, 18, 0.06);
+  transform: translateY(-1px);
 }
 
 @media (max-width: 720px) {
