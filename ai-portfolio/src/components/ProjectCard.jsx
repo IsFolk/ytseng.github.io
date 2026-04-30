@@ -3,8 +3,9 @@ import styles from "./ProjectCard.module.css";
 
 export default function ProjectCard({ project, onClick }) {
   const Card = onClick ? "button" : Link;
+
   const cardProps = onClick
-    ? { onClick: () => onClick(project.slug) }
+    ? { type: "button", onClick: () => onClick(project.slug) }
     : { to: `/projects/${project.slug}` };
 
   return (

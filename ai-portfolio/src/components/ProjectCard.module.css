@@ -1,5 +1,10 @@
 .card {
   display: block;
+  width: 100%;
+  appearance: none;
+  font: inherit;
+  cursor: pointer;
+
   background: #fffdf8;
   border: 1px solid #ddd6c8;
   border-radius: 28px;
@@ -7,6 +12,8 @@
   box-shadow: 0 18px 45px rgba(32, 24, 12, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: center;
+
+  color: #121212;
 }
 
 .card:hover {
@@ -62,6 +69,7 @@
   padding: 8px 12px;
   font-size: 14px;
   background: #f6f4ef;
+  color: #121212;
 }
 
 @media (max-width: 900px) {
